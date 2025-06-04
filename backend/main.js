@@ -1,12 +1,10 @@
 import express from 'express';
+const router = express.Router();
 
-export default function () {
-    const router = express.Router();
+import CoursesRoute from "./routes/Courses/CoursesRoute.js";
 
-    // Apply middleware
-    router.use(corsMiddleware);
-
-    // API routes
-    
+// Define route mounting point
+export default function setupRoutes() {
+    router.use( CoursesRoute); // All course routes now prefixed with /courses
     return router;
 }

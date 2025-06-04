@@ -29,10 +29,10 @@ const CourseCard = ({ course }) => {
             <Clock className="h-4 w-4 mr-1" />
             {course.duration}
           </div>
-          <div className="flex items-center text-gray-600 text-sm">
+          {/* <div className="flex items-center text-gray-600 text-sm">
             <Users className="h-4 w-4 mr-1" />
             {course.students.toLocaleString()}
-          </div>
+          </div> */}
         </div>
         <div className="flex items-center mb-4">
           <div className="flex text-yellow-500">

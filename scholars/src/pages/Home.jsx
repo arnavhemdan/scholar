@@ -1,13 +1,13 @@
 import React from 'react';
 import Carousel from '../components/Carousel';
 import CourseCard from '../components/CourseCard';
-import { courses } from '../data/courses';
+// import { courses } from '../data/courses';
 import { GraduationCap, Users, Award, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
   // Get featured courses only
-  const featuredCourses = courses.filter(course => course.featured);
+  // const featuredCourses = courses.filter(course => course.featured);
 
   return (
     <div>
@@ -52,11 +52,11 @@ const Home = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {featuredCourses.map(course => (
               <CourseCard key={course.id} course={course} />
             ))}
-          </div>
+          </div> */}
           
           <div className="mt-12 text-center">
             <Link 
