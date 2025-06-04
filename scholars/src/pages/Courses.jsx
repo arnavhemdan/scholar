@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import CourseCard from '../components/CourseCard';
 import SearchBar from '../components/SearchBar';
 import { Filter } from 'lucide-react';
+const BASE = process.env.REACT_APP_API_BASE_URL; // ✅ CRA-compatible
 
 const Courses = () => {
   const [courses, setCourses] = useState([]);
@@ -16,7 +17,7 @@ const Courses = () => {
   useEffect(() => {
     const fetchCourses = async () => {
       try {
-        const res = await fetch('http://localhost:2000/scholarsItech/getCourses'); // Update with your actual API endpoint
+        const res = await fetch(`${BASE}/scholarsItech/getCourses`); // Update with your actual API endpoint
         if (!res.ok) throw new Error('Failed to fetch courses');
         const data = await res.json();
         console.log(data);

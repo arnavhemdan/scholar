@@ -1,7 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+const BASE = process.env.REACT_APP_API_BASE_URL; // ✅ CRA-compatible
+
+
 
 const Contact = () => {
+  // State to hold contact information from API
+  const [contactInfo, setContactInfo] = useState({
+    location: '',
+    email: '',
+    pincode: '',
+    phoneNumber: '',
+    operationHours: '',
+    googleMapLink: ''
+  });
+
+  // State for form data
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -10,30 +24,53 @@ const Contact = () => {
     message: ''
   });
 
+  // Fetch contact details on component mount
+  useEffect(() => {
+    fetch(`${BASE}/scholarsItech/contactDetails`)
+      .then(response => response.json())
+      .then(data => {
+        // Assume API returns keys matching the state fields
+        setContactInfo(data);
+      })
+      .catch(error => console.error('Error fetching contact info:', error));
+  }, []);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
+    setFormData(prev => ({
+      ...prev,
       [name]: value
-    });
+    }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // In a real application, you would handle the form submission here
-    console.log('Form submitted:', formData);
-    
-    // Reset the form after submission
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      subject: '',
-      message: ''
-    });
-
-    // Show success message (in a real app, this would be more sophisticated)
-    alert('Thank you for your message. We will get back to you soon!');
+    // Send form data to backend via POST
+    fetch(`${BASE}/scholarsItech/ContactQueries`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData)  // JSON-stringify the data
+    })
+      .then(response => {
+        if (!response.ok) throw new Error('Network response was not ok');
+        return response.json();
+      })
+      .then(data => {
+        console.log('Success:', data);
+        // Reset form after successful submission
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: ''
+        });
+        alert('Thank you for your message. We will get back to you soon!');
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('There was an error submitting the form. Please try again.');
+      });
   };
 
   return (
@@ -67,7 +104,9 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-800 mb-1">Our Location</h3>
-                    <p className="text-gray-600">123 Education St, Learning City, 10001</p>
+                    <p className="text-gray-600">
+                      {contactInfo.location} {contactInfo.pincode && `, ${contactInfo.pincode}`}
+                    </p>
                   </div>
                 </div>
                 
@@ -77,7 +116,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-800 mb-1">Phone Number</h3>
-                    <p className="text-gray-600">(123) 456-7890</p>
+                    <p className="text-gray-600">{contactInfo.phoneNumber}</p>
                   </div>
                 </div>
                 
@@ -87,7 +126,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-800 mb-1">Email Address</h3>
-                    <p className="text-gray-600">info@edulearn.com</p>
+                    <p className="text-gray-600">{contactInfo.email}</p>
                   </div>
                 </div>
                 
@@ -97,9 +136,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-800 mb-1">Hours of Operation</h3>
-                    <p className="text-gray-600">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                    <p className="text-gray-600">Saturday: 10:00 AM - 2:00 PM</p>
-                    <p className="text-gray-600">Sunday: Closed</p>
+                    <p className="text-gray-600"> {contactInfo.operationHours}</p>
                   </div>
                 </div>
               </div>
@@ -208,7 +245,7 @@ const Contact = () => {
           
           <div className="rounded-lg overflow-hidden shadow-md h-[400px]">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.3059445135!2d-74.25986613799748!3d40.69714941954754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1618429602741!5m2!1sen!2s" 
+              src={contactInfo.googleMapLink || ''} 
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 
@@ -220,7 +257,7 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* FAQ Section */}
+      {/* FAQ Section (unchanged) */}
       <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">

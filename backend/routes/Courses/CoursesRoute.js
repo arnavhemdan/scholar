@@ -7,7 +7,6 @@ router.get('/getCourses',async (req,res)=>
    try{
       console.log("backend");
     const Course= await Courses.find();
-    console.log(Course);
     res.json(Course);
    }
    catch(error)
