@@ -245,7 +245,7 @@ const Contact = () => {
           
           <div className="rounded-lg overflow-hidden shadow-md h-[400px]">
             <iframe 
-              src={contactInfo.googleMapLink || ''} 
+              src={contactInfo.googleMapLink } 
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 

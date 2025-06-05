@@ -6,7 +6,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Courses from './pages/Courses';
 import Contact from './pages/Contact';
-
+import FeedbackForm from './components/FeedbackForm'
 function App() {
   return (
     <BrowserRouter>
@@ -18,6 +18,8 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/courses" element={<Courses />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/FeedbackForm" element={<FeedbackForm />} />
+            
           </Routes>
         </main>
         <Footer />
