@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import CourseCard from '../components/CourseCard';
-import SearchBar from '../components/SearchBar';
+import CourseCard from '../Course/CourseCard';
+import SearchBar from './SearchBar';
 import { Filter } from 'lucide-react';
 const BASE = process.env.REACT_APP_API_BASE_URL; // ✅ CRA-compatible
 

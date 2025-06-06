@@ -1,6 +1,6 @@
 
-import Carousel from '../components/Carousel';
-import CourseCard from '../components/CourseCard';
+import Carousel from '../Carousel/Carousel';
+import CourseCard from '../Course/CourseCard';
 import React, { useState, useEffect } from 'react';
 import { GraduationCap, Users, Award, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
