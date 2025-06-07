@@ -10,7 +10,6 @@ import {
   MapPin, 
   BookOpen,
   ArrowUp,
-  MessageSquare,
   Globe
 } from 'lucide-react';
 
@@ -63,12 +62,12 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gradient-to-b from-gray-900 to-gray-800 text-white">
+    <footer className="bg-[#1a3c2a] text-[#e0d9c9]">
       {/* Back to top button */}
       {isVisible && (
         <button 
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 z-50 bg-emerald-500 hover:bg-emerald-600 text-white p-3 rounded-full shadow-lg transition-all duration-300 animate-bounce"
+          className="fixed bottom-6 right-6 z-50 bg-[#c8b08d] hover:bg-[#2d5d42] text-[#1a3c2a] p-3 rounded-full shadow-lg transition-all duration-300 animate-bounce"
           aria-label="Back to top"
         >
           <ArrowUp size={20} />
@@ -77,41 +76,41 @@ const Footer = () => {
       
       {/* Main footer content */}
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
-          {/* Brand Info */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          {/* Brand Info - spans 2 columns on large screens */}
           <div className="lg:col-span-2">
             <div className="flex items-center mb-5">
-              <div className="bg-emerald-500 p-2 rounded-lg mr-3">
-                <BookOpen className="h-8 w-8 text-white" />
+              <div className="bg-[#2d5d42] p-2 rounded-lg mr-3">
+                <BookOpen className="h-8 w-8 text-[#c8b08d]" />
               </div>
-              <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-teal-300">
-                EduLearn
+              <span className="text-2xl font-bold text-[#e0d9c9]">
+                Scholars' Itech
               </span>
             </div>
-            <p className="text-gray-300 mb-6 leading-relaxed">
+            <p className="mb-6 leading-relaxed">
               Transforming lives through quality education. Our mission is to provide accessible, 
               innovative learning experiences that empower students to achieve their goals.
             </p>
             
             <div className="flex space-x-4">
-              <a href="#" className="bg-gray-800 p-3 rounded-full hover:bg-emerald-500 transition-all duration-300 group">
-                <Facebook className="text-gray-300 group-hover:text-white" size={18} />
+              <a href="https://www.facebook.com/share/16UxCkvLQc/" className="bg-[#2d5d42] p-3 rounded-full hover:bg-[#c8b08d] transition-all duration-300 group">
+                <Facebook className="text-[#e0d9c9] group-hover:text-[#1a3c2a]" size={18} />
               </a>
-              <a href="#" className="bg-gray-800 p-3 rounded-full hover:bg-emerald-500 transition-all duration-300 group">
-                <Instagram className="text-gray-300 group-hover:text-white" size={18} />
+              <a href="https://www.instagram.com/scholarsitechdoon_?igsh=M3Fva3pobTF1NWcx" className="bg-[#2d5d42] p-3 rounded-full hover:bg-[#c8b08d] transition-all duration-300 group">
+                <Instagram className="text-[#e0d9c9] group-hover:text-[#1a3c2a]" size={18} />
               </a>
-              <a href="#" className="bg-gray-800 p-3 rounded-full hover:bg-emerald-500 transition-all duration-300 group">
-                <Twitter className="text-gray-300 group-hover:text-white" size={18} />
+              <a href="#" className="bg-[#2d5d42] p-3 rounded-full hover:bg-[#c8b08d] transition-all duration-300 group">
+                <Twitter className="text-[#e0d9c9] group-hover:text-[#1a3c2a]" size={18} />
               </a>
-              <a href="#" className="bg-gray-800 p-3 rounded-full hover:bg-emerald-500 transition-all duration-300 group">
-                <Linkedin className="text-gray-300 group-hover:text-white" size={18} />
+              <a href="#" className="bg-[#2d5d42] p-3 rounded-full hover:bg-[#c8b08d] transition-all duration-300 group">
+                <Linkedin className="text-[#e0d9c9] group-hover:text-[#1a3c2a]" size={18} />
               </a>
             </div>
           </div>
           
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-5 pb-2 border-b border-emerald-500 inline-block">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-5 pb-2 border-b border-[#c8b08d] inline-block">Quick Links</h3>
             <ul className="space-y-3">
               {[
                 { path: "/", label: "Home" },
@@ -123,9 +122,9 @@ const Footer = () => {
                 <li key={index}>
                   <Link 
                     to={item.path} 
-                    className="text-gray-300 hover:text-emerald-400 transition-colors flex items-center group"
+                    className="hover:text-[#c8b08d] transition-colors flex items-center group"
                   >
-                    <span className="w-2 h-2 bg-emerald-500 rounded-full mr-3"></span>
+                    <span className="w-2 h-2 bg-[#c8b08d] rounded-full mr-3"></span>
                     {item.label}
                   </Link>
                 </li>
@@ -133,46 +132,22 @@ const Footer = () => {
             </ul>
           </div>
           
-          {/* Popular Courses */}
-          <div>
-            <h3 className="text-lg font-semibold mb-5 pb-2 border-b border-emerald-500 inline-block">Popular Courses</h3>
-            <ul className="space-y-3">
-              {[
-                "Web Development Bootcamp",
-                "Data Science & AI",
-                "Digital Marketing Mastery",
-                "UI/UX Design Fundamentals",
-                "Cloud Computing Essentials"
-              ].map((course, index) => (
-                <li key={index}>
-                  <a 
-                    href="#" 
-                    className="text-gray-300 hover:text-emerald-400 transition-colors flex items-center group"
-                  >
-                    <span className="w-2 h-2 bg-emerald-500 rounded-full mr-3"></span>
-                    {course}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-          
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-5 pb-2 border-b border-emerald-500 inline-block">Contact Info</h3>
+            <h3 className="text-lg font-semibold mb-5 pb-2 border-b border-[#c8b08d] inline-block">Contact Info</h3>
             <ul className="space-y-4">
               <li className="flex items-start">
-                <div className="bg-emerald-500/10 p-2 rounded-full mr-3 mt-1">
-                  <MapPin className="h-5 w-5 text-emerald-400" />
+                <div className="bg-[#2d5d42] p-2 rounded-full mr-3 mt-1">
+                  <MapPin className="h-5 w-5 text-[#c8b08d]" />
                 </div>
                 <div>
                   <p className="font-medium">Location</p>
-                  <p className="text-gray-300">
+                  <p>
                     {contactInfo.location}, {contactInfo.pincode}
                   </p>
                   <a 
                     href={contactInfo.googleMapLink} 
-                    className="text-emerald-400 text-sm hover:underline inline-flex items-center mt-1"
+                    className="text-[#c8b08d] text-sm hover:underline inline-flex items-center mt-1"
                   >
                     <Globe className="mr-1" size={14} /> View on map
                   </a>
@@ -180,30 +155,30 @@ const Footer = () => {
               </li>
               
               <li className="flex items-start">
-                <div className="bg-emerald-500/10 p-2 rounded-full mr-3 mt-1">
-                  <Phone className="h-5 w-5 text-emerald-400" />
+                <div className="bg-[#2d5d42] p-2 rounded-full mr-3 mt-1">
+                  <Phone className="h-5 w-5 text-[#c8b08d]" />
                 </div>
                 <div>
                   <p className="font-medium">Phone</p>
                   <a 
                     href={`tel:${contactInfo.phoneNumber}`} 
-                    className="text-gray-300 hover:text-emerald-400"
+                    className="hover:text-[#c8b08d]"
                   >
                     {contactInfo.phoneNumber}
                   </a>
-                  <p className="text-gray-300 text-sm mt-1">{contactInfo.operationHours}</p>
+                  <p className="text-sm mt-1">{contactInfo.operationHours}</p>
                 </div>
               </li>
               
               <li className="flex items-start">
-                <div className="bg-emerald-500/10 p-2 rounded-full mr-3 mt-1">
-                  <Mail className="h-5 w-5 text-emerald-400" />
+                <div className="bg-[#2d5d42] p-2 rounded-full mr-3 mt-1">
+                  <Mail className="h-5 w-5 text-[#c8b08d]" />
                 </div>
                 <div>
                   <p className="font-medium">Email</p>
                   <a 
                     href={`mailto:${contactInfo.email}`} 
-                    className="text-gray-300 hover:text-emerald-400"
+                    className="hover:text-[#c8b08d]"
                   >
                     {contactInfo.email}
                   </a>
@@ -214,15 +189,15 @@ const Footer = () => {
         </div>
         
         {/* Copyright */}
-        <div className="border-t border-gray-700 pt-6 pb-4">
+        <div className="border-t border-[#2d5d42] pt-6 pb-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm mb-4 md:mb-0">
+            <p className="text-sm mb-4 md:mb-0">
               © {new Date().getFullYear()} Scholars Itech Institute. All rights reserved.
             </p>
             <div className="flex space-x-6">
-              <a href="#" className="text-gray-400 hover:text-emerald-400 text-sm">Privacy Policy</a>
-              <a href="#" className="text-gray-400 hover:text-emerald-400 text-sm">Terms of Service</a>
-              <a href="#" className="text-gray-400 hover:text-emerald-400 text-sm">Sitemap</a>
+              <a href="#" className="hover:text-[#c8b08d] text-sm">Privacy Policy</a>
+              <a href="#" className="hover:text-[#c8b08d] text-sm">Terms of Service</a>
+            
             </div>
           </div>
         </div>

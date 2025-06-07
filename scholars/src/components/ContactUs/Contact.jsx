@@ -339,20 +339,20 @@ const Contact = () => {
           <div className="max-w-3xl mx-auto space-y-4">
             {[
               {
-                question: "How do I enroll in a course?",
-                answer: "You can enroll in any of our courses directly through our website. Simply navigate to the course page, click on 'Enroll Now,' and follow the prompts to complete your registration. If you need assistance, our admissions team is available to help."
+                question: "How much time does it take to learn a particular programming language?",
+                answer: "The time depends on the complexity of the language and your prior experience. On average, it takes 2 to 6 months to become comfortable with most languages through consistent practice."
               },
               {
-                question: "What payment methods do you accept?",
-                answer: "We accept all major credit cards, PayPal, and bank transfers. We also offer payment plans for select courses to make education more accessible. Contact our finance department for customized payment options."
+                question: "Will I be able to learn a programming language?",
+                answer: "Yes, anyone can learn a programming language with consistent effort and the right resources. Start with a beginner-friendly language and practice regularly."
               },
               {
-                question: "Do you offer refunds?",
-                answer: "Yes, we offer a 30-day money-back guarantee for most of our courses. If you're not satisfied with your learning experience, you can request a full refund within 30 days of enrollment. Certain specialized programs may have different refund policies."
+                question: "Will there be regular classes?",
+                answer: "Yes, the institute is only closed on Sundays and the third Saturday of every month."
               },
               {
-                question: "How can I get help if I'm having technical issues?",
-                answer: "Our technical support team is available 24/7 to assist you with any issues you may encounter. You can reach them through email, phone, or the live chat feature on our website. We also have an extensive knowledge base with troubleshooting guides."
+                question: "How can I get help if I'm having technical issues?",
+                answer: "Our technical support team is available during working hours to assist you with any issues you may encounter. You can reach them via whatsapp, phone."
               },
               {
                 question: "Are there any prerequisites for your courses?",

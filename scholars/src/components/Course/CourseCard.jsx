@@ -1,12 +1,13 @@
 import React from 'react';
 import { Star, Users, Clock } from 'lucide-react';
+const BASE = process.env.REACT_APP_API_BASE_URL;
 
-const CourseCard = ({ course }) => {
+const CourseCard = ({ course, onEnrollClick }) => {
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
       <div className="relative">
         <img 
-          src={course.image} 
+       src={`${BASE}/${course.image}`} 
           alt={course.title} 
           className="w-full h-48 object-cover"
         />
@@ -29,10 +30,6 @@ const CourseCard = ({ course }) => {
             <Clock className="h-4 w-4 mr-1" />
             {course.duration}
           </div>
-          {/* <div className="flex items-center text-gray-600 text-sm">
-            <Users className="h-4 w-4 mr-1" />
-            {course.students.toLocaleString()}
-          </div> */}
         </div>
         <div className="flex items-center mb-4">
           <div className="flex text-yellow-500">
@@ -48,7 +45,10 @@ const CourseCard = ({ course }) => {
         </div>
         <div className="flex items-center justify-between">
           <span className="text-blue-600 font-bold">{course.price}</span>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">
+          <button 
+            onClick={() => onEnrollClick(course)}
+            className="inline-block bg-[#1a3c2a] hover:bg-[#2d5d42] text-white px-4 py-2 rounded-md text-sm font-medium transition-colors"
+          >
             Enroll Now
           </button>
         </div>

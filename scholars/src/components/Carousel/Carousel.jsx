@@ -78,7 +78,7 @@ const Carousel = () => {
                 <p className="text-lg md:text-xl text-gray-200 mb-6 max-w-2xl mx-auto animate-fadeIn animation-delay-200">
                   {slide.description}
                 </p>
-                <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-md transition-all transform hover:scale-105 animate-fadeIn animation-delay-400">
+                <button className="inline-block bg-[#1a3c2a] hover:bg-[#2d5d42] text-white  font-medium py-2 px-6 rounded-md transition-all transform hover:scale-105 animate-fadeIn animation-delay-400">
                   {slide.buttonText}
                 </button>
               </div>

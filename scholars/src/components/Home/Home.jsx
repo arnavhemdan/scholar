@@ -1,21 +1,20 @@
-
 import Carousel from '../Carousel/Carousel';
 import CourseCard from '../Course/CourseCard';
 import React, { useState, useEffect } from 'react';
 import { GraduationCap, Users, Award, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
 const BASE = process.env.REACT_APP_API_BASE_URL; 
+
 const Home = () => {
-   const [courses, setCourses] = useState([]);
+  const [courses, setCourses] = useState([]);
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null);
-
-
-    const [testimonials, setTestimonials] = useState([]);
+  const [testimonials, setTestimonials] = useState([]);
   const [testimonialsLoading, setTestimonialsLoading] = useState(true);
   const [testimonialsError, setTestimonialsError] = useState(null);
 
-   useEffect(() => {
+  useEffect(() => {
     const fetchCourses = async () => {
       try {
         setLoading(true);
@@ -32,9 +31,10 @@ const Home = () => {
 
     fetchCourses();
   }, []);
-    const featuredCourses = courses.slice(0, 4);
-   
-      useEffect(() => {
+  
+  const featuredCourses = courses.slice(0, 4);
+  
+  useEffect(() => {
     const fetchTestimonials = async () => {
       try {
         setTestimonialsLoading(true);
@@ -52,56 +52,55 @@ const Home = () => {
     fetchTestimonials();
   }, []);
 
-
-
   return (
-    <div>
+    <div className="bg-[#f9f5f0]">
       {/* Hero Carousel */}
       <Carousel />
 
       {/* Stats Section */}
-      <section className="py-12 bg-blue-50">
+      <section className="py-12 bg-[#e0d9c9]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-sm flex flex-col items-center text-center transform transition-transform hover:scale-105">
-              <GraduationCap className="text-blue-600 w-12 h-12 mb-4" />
-              <h3 className="text-4xl font-bold text-gray-800 mb-2">50+</h3>
-              <p className="text-gray-600">Courses Available</p>
+              <GraduationCap className="text-[#1a3c2a] w-12 h-12 mb-4" />
+              <h3 className="text-4xl font-bold text-[#1a3c2a] mb-2">50+</h3>
+              <p className="text-[#2d5d42]">Courses Available</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm flex flex-col items-center text-center transform transition-transform hover:scale-105">
-              <Users className="text-blue-600 w-12 h-12 mb-4" />
-              <h3 className="text-4xl font-bold text-gray-800 mb-2">10,000+</h3>
-              <p className="text-gray-600">Students Enrolled</p>
+              <Users className="text-[#1a3c2a] w-12 h-12 mb-4" />
+              <h3 className="text-4xl font-bold text-[#1a3c2a] mb-2">10,000+</h3>
+              <p className="text-[#2d5d42]">Students Enrolled</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm flex flex-col items-center text-center transform transition-transform hover:scale-105">
-              <Award className="text-blue-600 w-12 h-12 mb-4" />
-              <h3 className="text-4xl font-bold text-gray-800 mb-2">95%</h3>
-              <p className="text-gray-600">Success Rate</p>
+              <Award className="text-[#1a3c2a] w-12 h-12 mb-4" />
+              <h3 className="text-4xl font-bold text-[#1a3c2a] mb-2">95%</h3>
+              <p className="text-[#2d5d42]">Success Rate</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm flex flex-col items-center text-center transform transition-transform hover:scale-105">
-              <Clock className="text-blue-600 w-12 h-12 mb-4" />
-              <h3 className="text-4xl font-bold text-gray-800 mb-2">24/7</h3>
-              <p className="text-gray-600">Learning Support</p>
+              <Clock className="text-[#1a3c2a] w-12 h-12 mb-4" />
+              <h3 className="text-4xl font-bold text-[#1a3c2a] mb-2">24/7</h3>
+              <p className="text-[#2d5d42]">Learning Support</p>
             </div>
           </div>
         </div>
       </section>
 
-        <section className="py-16">
+      {/* Featured Courses */}
+      <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">Featured Courses</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold text-[#1a3c2a] mb-4">Featured Courses</h2>
+            <p className="text-[#2d5d42] max-w-2xl mx-auto">
               Discover our most popular courses designed to help you advance your career.
             </p>
           </div>
           
           {loading ? (
-            <div className="text-center py-10">
+            <div className="text-center py-10 text-[#1a3c2a]">
               <p>Loading courses...</p>
             </div>
           ) : error ? (
-            <div className="text-center text-red-500 py-10">
+            <div className="text-center text-red-600 py-10">
               <p>Error: {error}</p>
             </div>
           ) : (
@@ -115,7 +114,7 @@ const Home = () => {
               <div className="mt-12 text-center">
                 <Link 
                   to="/courses" 
-                  className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-md transition-colors"
+                  className="inline-block bg-[#1a3c2a] hover:bg-[#2d5d42] text-white font-medium py-3 px-6 rounded-md transition-colors"
                 >
                   View All Courses
                 </Link>
@@ -125,22 +124,22 @@ const Home = () => {
         </div>
       </section>
 
-           {/* Testimonials Section */}
-      <section className="py-16 bg-gray-50">
+      {/* Testimonials Section */}
+      <section className="py-16 bg-[#e0d9c9]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">What Our Students Say</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold text-[#1a3c2a] mb-4">What Our Students Say</h2>
+            <p className="text-[#2d5d42] max-w-2xl mx-auto">
               Hear from our students about how our courses have transformed their careers and lives.
             </p>
           </div>
           
           {testimonialsLoading ? (
-            <div className="text-center py-10">
+            <div className="text-center py-10 text-[#1a3c2a]">
               <p>Loading testimonials...</p>
             </div>
           ) : testimonialsError ? (
-            <div className="text-center text-red-500 py-10">
+            <div className="text-center text-red-600 py-10">
               <p>Error: {testimonialsError}</p>
             </div>
           ) : (
@@ -158,11 +157,11 @@ const Home = () => {
                       }}
                     />
                     <div>
-                      <h4 className="font-semibold text-gray-800">{testimonial.name}</h4>
-                      <p className="text-sm text-gray-500">{testimonial.course || "Student"}</p>
+                      <h4 className="font-semibold text-[#1a3c2a]">{testimonial.name}</h4>
+                      <p className="text-sm text-[#2d5d42]">{testimonial.course || "Student"}</p>
                     </div>
                   </div>
-                  <p className="text-gray-600 italic">
+                  <p className="text-[#2d5d42] italic">
                     "{testimonial.message}"
                   </p>
                 </div>
@@ -171,14 +170,15 @@ const Home = () => {
           )}
         </div>
       </section>
+      
       {/* CTA Section */}
-      <section className="py-16 bg-blue-600">
+      <section className="py-16 bg-[#1a3c2a]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Start Your Learning Journey?</h2>
-          <p className="text-blue-100 max-w-2xl mx-auto mb-8">
+          <p className="text-[#e0d9c9] max-w-2xl mx-auto mb-8">
             Join thousands of students who have transformed their careers with our industry-recognized courses.
           </p>
-          <button className="bg-white hover:bg-gray-100 text-blue-600 font-bold py-3 px-8 rounded-md shadow-lg transition-all transform hover:scale-105">
+          <button className="bg-[#e0d9c9] hover:bg-[#d0c9b9] text-[#1a3c2a] font-bold py-3 px-8 rounded-md shadow-lg transition-all transform hover:scale-105">
             Get Started Today
           </button>
         </div>

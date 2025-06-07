@@ -7,7 +7,7 @@ export const CoursesData = [
     duration: "16 weeks",
     price: "$499",
     rating: 4.8,
-    image: "https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    image: "staticfiles/courses_img/c-img.jpg",
     featured: true
   },
   {
@@ -85,6 +85,106 @@ export const CoursesData = [
     price: "$549",
     rating: 4.8,
     image: "https://images.pexels.com/photos/5380642/pexels-photo-5380642.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    featured: false
+  },
+  {
+    title: "C Programming Basics",
+    category: "C",
+    description: "Learn the fundamentals of C programming including syntax, loops, and functions.",
+    duration: "6 weeks",
+    price: "$199",
+    rating: 4.5,
+    image: "https://via.placeholder.com/300",
+    featured: true
+  },
+  {
+    title: "Object-Oriented Programming with C++",
+    category: "C++",
+    description: "Understand classes, objects, inheritance, and polymorphism in C++.",
+    duration: "8 weeks",
+    price: "$249",
+    rating: 4.6,
+    image: "https://via.placeholder.com/300",
+    featured: false
+  },
+  {
+    title: "Statistical Computing with R",
+    category: "R",
+    description: "Analyze data and build statistical models using R programming.",
+    duration: "8 weeks",
+    price: "$299",
+    rating: 4.7,
+    image: "https://via.placeholder.com/300",
+    featured: true
+  },
+  {
+    title: "Java Programming Mastery",
+    category: "Java",
+    description: "Build robust applications with object-oriented programming in Java.",
+    duration: "10 weeks",
+    price: "$349",
+    rating: 4.8,
+    image: "https://via.placeholder.com/300",
+    featured: true
+  },
+  {
+    title: "Web Development with JavaScript",
+    category: "JavaScript",
+    description: "Create dynamic websites using modern JavaScript techniques and tools.",
+    duration: "8 weeks",
+    price: "$299",
+    rating: 4.7,
+    image: "https://via.placeholder.com/300",
+    featured: true
+  },
+  {
+    title: "Full Stack Web Development",
+    category: "Full Stack",
+    description: "Learn front-end and back-end development using the MERN stack.",
+    duration: "16 weeks",
+    price: "$599",
+    rating: 4.9,
+    image: "https://via.placeholder.com/300",
+    featured: true
+  },
+  {
+    title: "MySQL for Beginners",
+    category: "MY SQL",
+    description: "Master MySQL for creating and managing relational databases.",
+    duration: "6 weeks",
+    price: "$199",
+    rating: 4.5,
+    image: "https://via.placeholder.com/300",
+    featured: false
+  },
+  {
+    title: "Advanced Excel Techniques",
+    category: "Adv. Excel",
+    description: "Automate and analyze data using advanced Excel functions and tools.",
+    duration: "5 weeks",
+    price: "$149",
+    rating: 4.4,
+    image: "https://via.placeholder.com/300",
+    featured: true
+  },
+  {
+    title: "Spoken English Essentials",
+    category: "Spoken English",
+    description: "Improve your spoken English with practical conversation skills and pronunciation.",
+    duration: "4 weeks",
+    price: "$99",
+    rating: 4.6,
+    image: "https://via.placeholder.com/300",
+    featured: false
+  },
+  {
+    title: "Tally ERP 9.0 Complete Course",
+    category: "Tally ERP 9.0",
+    description: "Learn GST, accounting, and inventory management with Tally ERP 9.0.",
+    duration: "6 weeks",
+    price: "$199",
+    rating: 4.5,
+    image: "https://via.placeholder.com/300",
     featured: false
   }
 ];
