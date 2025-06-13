@@ -58,12 +58,11 @@ const Courses = () => {
 
   const handleEnrollmentSubmit = (enrollmentData) => {
     console.log('Enrollment submitted:', enrollmentData);
-    // Send enrollment data to backend
-    // fetch(`${BASE}/enrollments`, {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify(enrollmentData)
-    // })
+    fetch(`${BASE}/scholarsItech/enrollments`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(enrollmentData)
+    })
     setEnrollmentCourse(null); // Close form after submission
   };
 

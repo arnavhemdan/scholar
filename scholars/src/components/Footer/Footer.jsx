@@ -145,12 +145,7 @@ const Footer = () => {
                   <p>
                     {contactInfo.location}, {contactInfo.pincode}
                   </p>
-                  <a 
-                    href={contactInfo.googleMapLink} 
-                    className="text-[#c8b08d] text-sm hover:underline inline-flex items-center mt-1"
-                  >
-                    <Globe className="mr-1" size={14} /> View on map
-                  </a>
+                  
                 </div>
               </li>
               
@@ -195,8 +190,8 @@ const Footer = () => {
               © {new Date().getFullYear()} Scholars Itech Institute. All rights reserved.
             </p>
             <div className="flex space-x-6">
-              <a href="#" className="hover:text-[#c8b08d] text-sm">Privacy Policy</a>
-              <a href="#" className="hover:text-[#c8b08d] text-sm">Terms of Service</a>
+              <a href='PrivacyPolicy' className="hover:text-[#c8b08d] text-sm">Privacy Policy</a>
+              <a href='TermsOfService' className="hover:text-[#c8b08d] text-sm">Terms of Service</a>
             
             </div>
           </div>

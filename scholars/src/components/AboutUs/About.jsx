@@ -285,10 +285,10 @@ const About = () => {
                   Arnav specializes in creating intuitive user interfaces with React, CSS frameworks,Node and MongoDB. 
                 </p>
                 <div className="flex space-x-3">
-                  <a href="#" className="bg-[#e0d9c9] p-2 rounded-full hover:bg-[#1a3c2a] transition-colors">
+                  <a href="https://github.com/arnavhemdan/" className="bg-[#e0d9c9] p-2 rounded-full hover:bg-[#1a3c2a] transition-colors">
                     <Github className="h-5 w-5 text-[#1a3c2a] hover:text-white" />
                   </a>
-                  <a href="#" className="bg-[#e0d9c9] p-2 rounded-full hover:bg-[#1a3c2a] transition-colors">
+                  <a href="https://www.linkedin.com/in/arnav-hemdan-840971253?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="bg-[#e0d9c9] p-2 rounded-full hover:bg-[#1a3c2a] transition-colors">
                     <Linkedin className="h-5 w-5 text-[#1a3c2a] hover:text-white" />
                   </a>
                 </div>

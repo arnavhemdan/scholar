@@ -5,12 +5,12 @@ const BASE = process.env.REACT_APP_API_BASE_URL;
 
 const Contact = () => {
   const [contactInfo, setContactInfo] = useState({
-    location: '123 Education Street, Learning District',
-    email: 'info@scholarsitech.edu',
-    pincode: '10001',
-    phoneNumber: '+1 (555) 123-4567',
+    location: '',
+    email: '',
+    pincode: '',
+    phoneNumber: '',
     operationHours: 'Monday - Friday: 9AM - 6PM\nSaturday: 10AM - 4PM',
-    googleMapLink: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.966309534304!2d-73.99130508428768!3d40.74205497932881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a3f81b0d0d%3A0x7c0e7e9b4b3b3b3b!2s123%20Education%20St%2C%20New%20York%2C%20NY%2010001!5e0!3m2!1sen!2sus!4v1629999999999!5m2!1sen!2sus'
+    googleMapLink: ''
   });
 
   const [formData, setFormData] = useState({
@@ -124,12 +124,7 @@ const Contact = () => {
                     <p className="text-[#3c3c36]">
                       {contactInfo.location} {contactInfo.pincode && `, ${contactInfo.pincode}`}
                     </p>
-                    <a 
-                      href={contactInfo.googleMapLink} 
-                      className="text-[#2d5d42] hover:text-[#1a3c2a] font-medium mt-1 inline-flex items-center"
-                    >
-                      View on map
-                    </a>
+                  
                   </div>
                 </div>
                 

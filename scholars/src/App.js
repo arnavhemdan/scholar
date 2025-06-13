@@ -6,7 +6,9 @@ import Home from './components/Home/Home.jsx';
 import About from './components/AboutUs/About.jsx';
 import Courses from './components/Course/Courses.jsx';
 import Contact from './components/ContactUs/Contact.jsx';
-import FeedbackForm from './components/FeedbackForm/FeedbackForm.jsx' 
+import FeedbackForm from './components/FeedbackForm/FeedbackForm.jsx'
+import PrivacyPolicy from './components/PrivacyPolicy/PrivacyPolicy.jsx'; 
+import TermsOfService from './components/TermsOfService/TermsOfService.jsx';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop.jsx';
 
 function App() {
@@ -22,6 +24,9 @@ function App() {
             <Route path="/courses" element={ <> <ScrollToTop /> <Courses /></>} />
             <Route path="/contact" element={<> <ScrollToTop /> <Contact /></>} />
             <Route path="/FeedbackForm" element={<> <ScrollToTop /> <FeedbackForm /></>} />
+            <Route path="/PrivacyPolicy" element={<> <ScrollToTop /> <PrivacyPolicy /></>} />
+            <Route path="/TermsOfService" element={<> <ScrollToTop /> <TermsOfService /></>} />
+            
           </Routes>
         </main>
         <Footer />

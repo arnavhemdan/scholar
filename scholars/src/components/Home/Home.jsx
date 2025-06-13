@@ -3,6 +3,8 @@ import CourseCard from '../Course/CourseCard';
 import React, { useState, useEffect } from 'react';
 import { GraduationCap, Users, Award, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import EnrollmentForm from '../EnrollmentForm/EnrollmentForm';
+
 
 const BASE = process.env.REACT_APP_API_BASE_URL; 
 
@@ -13,6 +15,7 @@ const Home = () => {
   const [testimonials, setTestimonials] = useState([]);
   const [testimonialsLoading, setTestimonialsLoading] = useState(true);
   const [testimonialsError, setTestimonialsError] = useState(null);
+const [enrollmentCourse, setEnrollmentCourse] = useState(null);
 
   useEffect(() => {
     const fetchCourses = async () => {
@@ -51,6 +54,17 @@ const Home = () => {
 
     fetchTestimonials();
   }, []);
+
+
+  const handleEnrollmentSubmit = (enrollmentData) => {
+    console.log('Enrollment submitted:', enrollmentData);
+    fetch(`${BASE}/scholarsItech/enrollments`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(enrollmentData)
+    })
+    setEnrollmentCourse(null); // Close form after submission
+  };
 
   return (
     <div className="bg-[#f9f5f0]">
@@ -106,10 +120,23 @@ const Home = () => {
           ) : (
             <>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+             
                 {featuredCourses.map(course => (
-                  <CourseCard key={course._id} course={course} />
-                ))}
+                 <CourseCard 
+              key={course._id || course.id} 
+              course={course}
+              onEnrollClick={setEnrollmentCourse}
+            />            
+             ))}
+
               </div>
+               {enrollmentCourse && (
+        <EnrollmentForm 
+          course={enrollmentCourse}
+          onClose={() => setEnrollmentCourse(null)}
+          onSubmit={handleEnrollmentSubmit}
+        />
+      )}
               
               <div className="mt-12 text-center">
                 <Link 
@@ -144,16 +171,16 @@ const Home = () => {
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.slice(0, 3).map(testimonial => (
+              {testimonials.slice(0, 8).map(testimonial => (
                 <div key={testimonial._id} className="bg-white p-6 rounded-lg shadow-sm">
                   <div className="flex items-center mb-4">
                     <img 
-                      src={testimonial.image || "https://via.placeholder.com/150"} 
+                      src={`${BASE}/${testimonial.image}` } 
                       alt={testimonial.name} 
                       className="w-12 h-12 rounded-full object-cover mr-4"
                       onError={(e) => {
                         e.target.onerror = null;
-                        e.target.src = "https://via.placeholder.com/150";
+                        
                       }}
                     />
                     <div>

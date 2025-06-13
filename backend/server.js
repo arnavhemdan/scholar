@@ -31,7 +31,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Serve static files
-app.use('/staticFiles', express.static('staticFiles'));
+app.use('/staticfiles', express.static('staticfiles'));
 
 // Set up routes
 const apiRoutes = setupRoutes(); // If setupRoutes doesn't need arguments
