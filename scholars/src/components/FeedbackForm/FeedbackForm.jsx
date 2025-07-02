@@ -130,6 +130,7 @@ const FeedbackForm = () => {
               value={formData.message}
               onChange={handleChange}
               className="w-full px-4 py-2 border border-[#e0d9c9] rounded-md bg-white"
+                 maxLength={50}
               placeholder="Your message here..."
               rows="4"
             />

@@ -1,7 +1,10 @@
 import React from 'react';
 import { BookOpen, Users, Award, MessageSquare, Code, Leaf, ChevronRight, HeartHandshake, UserRound, Star, GraduationCap, Trophy } from 'lucide-react';
 
+import { useNavigate } from 'react-router-dom';
 const About = () => {
+    const navigate = useNavigate();
+
   return (
     <div className="pt-16 pb-16 bg-[#f9f5f0]">
       {/* About Header */}
@@ -60,7 +63,7 @@ const About = () => {
             <div className="relative order-1 lg:order-2">
               <div className="aspect-video rounded-2xl overflow-hidden shadow-xl border-4 border-[#e0d9c9]">
                 <img 
-                  src="https://images.pexels.com/photos/3184395/pexels-photo-3184395.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                  src="/images/aboutus1.png" 
                   alt="Scholars Itech Team" 
                   className="w-full h-full object-cover"
                 />
@@ -81,7 +84,7 @@ const About = () => {
             <div className="relative">
               <div className="aspect-video rounded-2xl overflow-hidden shadow-xl border-4 border-[#e0d9c9]">
                 <img 
-                  src="https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                  src="/images/aboutus2.png" 
                   alt="Women Empowerment" 
                   className="w-full h-full object-cover"
                 />
@@ -209,7 +212,7 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-[#e0d9c9] hover:shadow-xl transition-all duration-300">
               <img 
-                src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                src="/images/nishat.png" 
                 alt="Ms. Nishat " 
                 className="w-full h-64 object-cover object-center"
               />
@@ -232,7 +235,7 @@ const About = () => {
             
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-[#e0d9c9] hover:shadow-xl transition-all duration-300">
               <img 
-                src="https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                src="/images/nigar.png" 
                 alt="Ms. Nigar" 
                 className="w-full h-64 object-cover object-center"
               />
@@ -309,10 +312,10 @@ const About = () => {
                   Ayush builds robust backend systems with Node.js and manages our database infrastructure.
                 </p>
                 <div className="flex space-x-3">
-                  <a href="#" className="bg-[#e0d9c9] p-2 rounded-full hover:bg-[#1a3c2a] transition-colors">
+                  <a href="https://github.com/ayushbalodhi/" className="bg-[#e0d9c9] p-2 rounded-full hover:bg-[#1a3c2a] transition-colors">
                     <Github className="h-5 w-5 text-[#1a3c2a] hover:text-white" />
                   </a>
-                  <a href="#" className="bg-[#e0d9c9] p-2 rounded-full hover:bg-[#1a3c2a] transition-colors">
+                  <a href="https://www.linkedin.com/in/ayush-balodhi/" className="bg-[#e0d9c9] p-2 rounded-full hover:bg-[#1a3c2a] transition-colors">
                     <Linkedin className="h-5 w-5 text-[#1a3c2a] hover:text-white" />
                   </a>
                 </div>
@@ -332,10 +335,10 @@ const About = () => {
               who are transforming their lives through education.
             </p>
             <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-              <button className="bg-[#c8b08d] hover:bg-[#b89e7a] text-[#1a3c2a] font-bold py-3 px-6 rounded-full shadow-lg transition-all flex items-center justify-center">
+              <button onClick={() => navigate('/courses')} className="bg-[#c8b08d] hover:bg-[#b89e7a] text-[#1a3c2a] font-bold py-3 px-6 rounded-full shadow-lg transition-all flex items-center justify-center">
                 Browse Courses <ChevronRight className="ml-2" />
               </button>
-              <button className="bg-transparent hover:bg-[#2d5d42] text-white border-2 border-[#c8b08d] font-bold py-3 px-6 rounded-full transition-all flex items-center justify-center">
+              <button onClick={() => navigate('/contact')} className="bg-transparent hover:bg-[#2d5d42] text-white border-2 border-[#c8b08d] font-bold py-3 px-6 rounded-full transition-all flex items-center justify-center">
                 Contact Us <MessageSquare className="ml-2 h-5 w-5" />
               </button>
             </div>

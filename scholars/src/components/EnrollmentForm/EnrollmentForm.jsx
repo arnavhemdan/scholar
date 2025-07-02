@@ -37,11 +37,7 @@ const EnrollmentForm = ({ course, onClose, onSubmit }) => {
         </div>
         
         <div className="p-4 border-b">
-          <div className="flex justify-between mb-2">
-            <span className="text-gray-600">Price:</span>
-            <span className="font-bold">{course.price}</span>
-          </div>
-          <div className="flex justify-between">
+                    <div className="flex justify-between">
             <span className="text-gray-600">Duration:</span>
             <span className="font-bold">{course.duration}</span>
           </div>

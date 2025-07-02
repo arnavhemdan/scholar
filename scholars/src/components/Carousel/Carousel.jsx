@@ -4,24 +4,21 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 const carouselData = [
   {
     id: 1,
-    image: 'https://images.pexels.com/photos/256431/pexels-photo-256431.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    image: '/images/carousel1.png',
     title: 'Transform Your Future With Quality Education',
-    description: 'Join thousands of students who have advanced their careers with our industry-recognized courses.',
-    buttonText: 'Explore Courses'
+    description: 'Join thousands of students who have advanced their careers with our industry-recognized courses.'
   },
   {
     id: 2,
-    image: 'https://images.pexels.com/photos/256517/pexels-photo-256517.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    image: '/images/carousel2.png',
     title: 'Learn From Industry Experts',
-    description: 'Our courses are designed and taught by professionals with years of real-world experience.',
-    buttonText: 'Meet Our Faculty'
+    description: 'Our courses are designed and taught by professionals with years of real-world experience.'
   },
   {
     id: 3,
-    image: 'https://images.pexels.com/photos/2982449/pexels-photo-2982449.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    image: '/images/carousel3.png',
     title: 'Flexible Learning Options',
-    description: 'Study online, on-campus, or in a hybrid format that fits your schedule and learning style.',
-    buttonText: 'View Options'
+    description: 'Study online, on-campus, or in a hybrid format that fits your schedule and learning style.'
   }
 ];
 
@@ -78,9 +75,7 @@ const Carousel = () => {
                 <p className="text-lg md:text-xl text-gray-200 mb-6 max-w-2xl mx-auto animate-fadeIn animation-delay-200">
                   {slide.description}
                 </p>
-                <button className="inline-block bg-[#1a3c2a] hover:bg-[#2d5d42] text-white  font-medium py-2 px-6 rounded-md transition-all transform hover:scale-105 animate-fadeIn animation-delay-400">
-                  {slide.buttonText}
-                </button>
+                
               </div>
             </div>
           </div>
@@ -111,7 +106,7 @@ const Carousel = () => {
               key={index}
               onClick={() => goToSlide(index)}
               className={`h-2 rounded-full transition-all ${
-                index === currentSlide ? 'w-8 bg-blue-500' : 'w-2 bg-white/50'
+                index === currentSlide ? 'w-8 bg-[#1a3c2a]' : 'w-2 bg-white/50'
               }`}
               aria-label={`Go to slide ${index + 1}`}
             />

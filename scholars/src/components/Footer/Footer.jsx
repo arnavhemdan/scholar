@@ -17,12 +17,12 @@ const BASE = process.env.REACT_APP_API_BASE_URL;
 
 const Footer = () => {
   const [contactInfo, setContactInfo] = useState({
-    location: '123 Education Street, Learning District',
-    email: 'info@edulearn.com',
-    pincode: '10001',
-    phoneNumber: '+1 (555) 123-4567',
-    operationHours: 'Mon-Fri: 9AM - 6PM',
-    googleMapLink: '#'
+    location: '',
+    email: '',
+    pincode: '',
+    phoneNumber: '',
+    operationHours: ''
+
   });
 
   const [isVisible, setIsVisible] = useState(false);

@@ -1,190 +1,265 @@
 export const CoursesData = [
-  {
-    
-    title: "Complete Web Development Bootcamp",
-    category: "Web Development",
-    description: "Master HTML, CSS, JavaScript, React, Node.js and more in this comprehensive course.",
-    duration: "16 weeks",
-    price: "$499",
-    rating: 4.8,
-    image: "staticfiles/courses_img/c-img.jpg",
-    featured: true
-  },
-  {
   
-    title: "Data Science Fundamentals",
-    category: "Data Science",
-    description: "Learn statistical analysis, Python, and machine learning algorithms to analyze complex datasets.",
-    duration: "12 weeks",
-    price: "$599",
-    rating: 4.7,
-    image: "https://images.pexels.com/photos/7689078/pexels-photo-7689078.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    featured: true
+  {
+    "title": "Complete C Bootcamp",
+    "category": "C",
+    "description": "Master C programming in this comprehensive bootcamp.",
+    "duration": "12 weeks",
+    "rating": 4.8,
+    "image": "staticfiles/courses_img/c.png",
+    "featured": true
   },
   {
-  
-    title: "Digital Marketing Masterclass",
-    category: "Marketing",
-    description: "Develop essential skills in SEO, social media marketing, email campaigns, and conversion optimization.",
-    duration: "8 weeks",
-    price: "$349",
-    rating: 4.6,
-    image: "https://images.pexels.com/photos/6476783/pexels-photo-6476783.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    featured: true
+    "title": "Complete C++ Bootcamp",
+    "category": "C++",
+    "description": "Master C++ programming in this comprehensive bootcamp.",
+    "duration": "12 weeks",
+    "rating": 4.6,
+    "image": "staticfiles/courses_img/cpp.png",
+    "featured": true
   },
   {
-    
-    title: "Mobile App Development with React Native",
-    category: "App Development",
-    description: "Build cross-platform mobile applications using React Native for iOS and Android.",
-    duration: "10 weeks",
-    price: "$449",
-    rating: 4.5,
-    image: "https://images.pexels.com/photos/6177645/pexels-photo-6177645.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    featured: false
+    "title": "Complete Java Bootcamp",
+    "category": "Java",
+    "description": "Master Java programming in this comprehensive bootcamp.",
+    "duration": "12 weeks",
+    "rating": 4.9,
+    "image": "staticfiles/courses_img/java.png",
+    "featured": true
   },
   {
-    
-    title: "UI/UX Design Principles",
-    category: "Design",
-    description: "Master the fundamentals of user interface and experience design using industry standard tools.",
-    duration: "8 weeks",
-    price: "$399",
-    rating: 4.9,
-    image: "https://images.pexels.com/photos/196645/pexels-photo-196645.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    featured: true
+    "title": "Complete Ruby Bootcamp",
+    "category": "Ruby",
+    "description": "Master Ruby programming in this comprehensive bootcamp.",
+    "duration": "16 weeks",
+    "rating": 4.2,
+    "image": "staticfiles/courses_img/ruby.png",
+    "featured": true
   },
   {
-    
-    title: "Artificial Intelligence Foundations",
-    category: "AI & ML",
-    description: "Explore the theoretical and practical aspects of AI including neural networks and deep learning.",
-    duration: "14 weeks",
-    price: "$699",
-    rating: 4.7,
-    image: "https://images.pexels.com/photos/8386434/pexels-photo-8386434.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    featured: false
+    "title": "Complete Swift Bootcamp",
+    "category": "Swift",
+    "description": "Master Swift programming in this comprehensive bootcamp.",
+    "duration": "16 weeks",
+    "rating": 4.4,
+    "image": "staticfiles/courses_img/swift.png",
+    "featured": true
   },
   {
-
-    title: "Business Analytics Certification",
-    category: "Business",
-    description: "Gain skills to interpret data, create reports, and make data-driven business decisions.",
-    duration: "6 weeks",
-    price: "$299",
-    rating: 4.4,
-    image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    featured: false
+    "title": "Complete R Bootcamp",
+    "category": "R",
+    "description": "Master R programming in this comprehensive bootcamp.",
+    "duration": "12 weeks",
+    "rating": 4.1,
+    "image": "staticfiles/courses_img/r.png",
+    "featured": true
   },
   {
-
-    title: "Cybersecurity Essentials",
-    category: "Security",
-    description: "Learn to protect systems, networks, and programs from digital attacks and vulnerabilities.",
-    duration: "12 weeks",
-    price: "$549",
-    rating: 4.8,
-    image: "https://images.pexels.com/photos/5380642/pexels-photo-5380642.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    featured: false
+    "title": "Complete JavaScript Bootcamp",
+    "category": "JavaScript",
+    "description": "Master JavaScript programming in this comprehensive bootcamp.",
+    "duration": "12 weeks",
+    "rating": 4.4,
+    "image": "staticfiles/courses_img/js.png",
+    "featured": true
   },
   {
-    title: "C Programming Basics",
-    category: "C",
-    description: "Learn the fundamentals of C programming including syntax, loops, and functions.",
-    duration: "6 weeks",
-    price: "$199",
-    rating: 4.5,
-    image: "https://via.placeholder.com/300",
-    featured: true
+    "title": "Complete Python Bootcamp",
+    "category": "Python",
+    "description": "Master Python programming in this comprehensive bootcamp.",
+    "duration": "12 weeks",
+    "rating": 4.6,
+    "image": "staticfiles/courses_img/python.png",
+    "featured": true
   },
   {
-    title: "Object-Oriented Programming with C++",
-    category: "C++",
-    description: "Understand classes, objects, inheritance, and polymorphism in C++.",
-    duration: "8 weeks",
-    price: "$249",
-    rating: 4.6,
-    image: "https://via.placeholder.com/300",
-    featured: false
+    "title": "Complete Web Development Bootcamp",
+    "category": "Web Development",
+    "description": "Master HTML, CSS, JavaScript, React, Node.js and more in this comprehensive bootcamp.",
+    "duration": "24 weeks",
+    "rating": 4.7,
+    "image": "staticfiles/courses_img/webdev.png",
+    "featured": true
   },
   {
-    title: "Statistical Computing with R",
-    category: "R",
-    description: "Analyze data and build statistical models using R programming.",
-    duration: "8 weeks",
-    price: "$299",
-    rating: 4.7,
-    image: "https://via.placeholder.com/300",
-    featured: true
+    "title": "Complete GO Bootcamp",
+    "category": "GO",
+    "description": "Master GO programming in this comprehensive bootcamp.",
+    "duration": "12 weeks",
+    "rating": 4.1,
+    "image": "staticfiles/courses_img/golang.png",
+    "featured": true
   },
   {
-    title: "Java Programming Mastery",
-    category: "Java",
-    description: "Build robust applications with object-oriented programming in Java.",
-    duration: "10 weeks",
-    price: "$349",
-    rating: 4.8,
-    image: "https://via.placeholder.com/300",
-    featured: true
+    "title": "Complete Kotlin Bootcamp",
+    "category": "Kotlin",
+    "description": "Master Kotlin programming in this comprehensive bootcamp.",
+    "duration": "16 weeks",
+    "rating": 4.4,
+    "image": "staticfiles/courses_img/kotlin.png",
+    "featured": true
   },
   {
-    title: "Web Development with JavaScript",
-    category: "JavaScript",
-    description: "Create dynamic websites using modern JavaScript techniques and tools.",
-    duration: "8 weeks",
-    price: "$299",
-    rating: 4.7,
-    image: "https://via.placeholder.com/300",
-    featured: true
+    "title": "Complete SQL Bootcamp",
+    "category": "DBMS",
+    "description": "Master SQL database management in this comprehensive bootcamp.",
+    "duration": "12 weeks",
+    "rating": 4.8,
+    "image": "staticfiles/courses_img/ms-sql.png",
+    "featured": true
   },
   {
-    title: "Full Stack Web Development",
-    category: "Full Stack",
-    description: "Learn front-end and back-end development using the MERN stack.",
-    duration: "16 weeks",
-    price: "$599",
-    rating: 4.9,
-    image: "https://via.placeholder.com/300",
-    featured: true
+    "title": "Complete SQLite Bootcamp",
+    "category": "DBMS",
+    "description": "Master SQLite database management in this comprehensive bootcamp.",
+    "duration": "12 weeks",
+    "rating": 4.2,
+    "image": "staticfiles/courses_img/sqllite.png",
+    "featured": true
   },
   {
-    title: "MySQL for Beginners",
-    category: "MY SQL",
-    description: "Master MySQL for creating and managing relational databases.",
-    duration: "6 weeks",
-    price: "$199",
-    rating: 4.5,
-    image: "https://via.placeholder.com/300",
-    featured: false
+    "title": "Complete MongoDB Bootcamp",
+    "category": "DBMS",
+    "description": "Master MongoDB database management in this comprehensive bootcamp.",
+    "duration": "12 weeks",
+    "rating": 4.9,
+    "image": "staticfiles/courses_img/mongo.png",
+    "featured": true
   },
   {
-    title: "Advanced Excel Techniques",
-    category: "Adv. Excel",
-    description: "Automate and analyze data using advanced Excel functions and tools.",
-    duration: "5 weeks",
-    price: "$149",
-    rating: 4.4,
-    image: "https://via.placeholder.com/300",
-    featured: true
+    "title": "Complete PostgreDB Bootcamp",
+    "category": "DBMS",
+    "description": "Master PostgreDB database management in this comprehensive bootcamp.",
+    "duration": "12 weeks",
+    "rating": 4.5,
+    "image": "staticfiles/courses_img/postres.png",
+    "featured": true
   },
   {
-    title: "Spoken English Essentials",
-    category: "Spoken English",
-    description: "Improve your spoken English with practical conversation skills and pronunciation.",
-    duration: "4 weeks",
-    price: "$99",
-    rating: 4.6,
-    image: "https://via.placeholder.com/300",
-    featured: false
+    "title": "Complete SQL-Server Bootcamp",
+    "category": "DBMS",
+    "description": "Master SQL Server database management in this comprehensive bootcamp.",
+    "duration": "12 weeks",
+    "rating": 4.5,
+    "image": "staticfiles/courses_img/sql-server.png",
+    "featured": true
   },
   {
-    title: "Tally ERP 9.0 Complete Course",
-    category: "Tally ERP 9.0",
-    description: "Learn GST, accounting, and inventory management with Tally ERP 9.0.",
-    duration: "6 weeks",
-    price: "$199",
-    rating: 4.5,
-    image: "https://via.placeholder.com/300",
-    featured: false
+    "title": "Complete MariaDB Bootcamp",
+    "category": "DBMS",
+    "description": "Master MariaDB database management in this comprehensive bootcamp.",
+    "duration": "12 weeks",
+    "rating": 4.3,
+    "image": "staticfiles/courses_img/mariadb.png",
+    "featured": true
+  },
+  {
+    "title": "Complete Typing Course",
+    "category": "Typing",
+    "description": "Master touch typing in this comprehensive course.",
+    "duration": "8 weeks",
+    "rating": 4.8,
+    "image": "staticfiles/courses_img/typing.png",
+    "featured": true
+  },
+  {
+    "title": "Complete MS-Access Course",
+    "category": "MS-Access",
+    "description": "Master MS-Access database management in this comprehensive course.",
+    "duration": "8 weeks",
+    "rating": 4.6,
+    "image": "staticfiles/courses_img/msaccess.png",
+    "featured": true
+  },
+  {
+    "title": "Complete MS-Office Course",
+    "category": "MS-Office",
+    "description": "Master MS-Office applications in this comprehensive course.",
+    "duration": "8 weeks",
+    "rating": 4.7,
+    "image": "staticfiles/courses_img/msoffice.png",
+    "featured": true
+  },
+  {
+    "title": "Complete Tally Course",
+    "category": "Tally",
+    "description": "Master Tally accounting software in this comprehensive course.",
+    "duration": "8 weeks",
+    "rating": 4.9,
+    "image": "staticfiles/courses_img/tally.png",
+    "featured": true
+  },
+  {
+    "title": "Complete Advance Excel Course",
+    "category": "Advance Excel",
+    "description": "Master advanced Excel techniques in this comprehensive course.",
+    "duration": "8 weeks",
+    "rating": 4.7,
+    "image": "staticfiles/courses_img/advanceexcel.png",
+    "featured": true
+  },
+  {
+    "title": "Complete data entry Course",
+    "category": "data entry",
+    "description": "Master data entry skills in this comprehensive course.",
+    "duration": "8 weeks",
+    "rating": 4.9,
+    "image": "staticfiles/courses_img/dataentry.png",
+    "featured": true
+  },
+{
+    "title": "Complete .NET Course",
+    "category": ".NET",
+    "description": "Master .NET framework development including C#, ASP.NET, and .NET Core.",
+    "duration": "12 weeks",
+    "rating": 4.1,
+    "image": "staticfiles/courses_img/dotnet.png",
+    "featured": true
+  },
+  {
+    "title": "Complete PHP Course",
+    "category": "PHP",
+    "description": "Become a full-stack web developer with PHP, MySQL, and Laravel framework.",
+    "duration": "8 weeks",
+    "rating": 4.8,
+    "image": "staticfiles/courses_img/php.png",
+    "featured": true
+  },
+  {
+    "title": "Complete ADV Java Course",
+    "category": "Java",
+    "description": "Advanced Java programming covering J2EE, Servlets, JSP, and Spring Framework.",
+    "duration": "12 weeks",
+    "rating": 4.4,
+    "image": "staticfiles/courses_img/advjava.png",
+    "featured": true
+  },
+  {
+    "title": "Informative Practices Course",
+    "category": "Python",
+    "description": "Data science and analytics using Python with Pandas, NumPy, and visualization tools.",
+    "duration": "8 weeks",
+    "rating": 4.5,
+    "image": "staticfiles/courses_img/InformativePractices.png",
+    "featured": true
+  },
+  {
+    "title": "Computer Fundamentals",
+    "category": "Computer Fundamentals",
+    "description": "Essential computer concepts including hardware, software, OS, and networking basics.",
+    "duration": "8 weeks",
+    "rating": 4.9,
+    "image": "staticfiles/courses_img/computerfundamentals.png",
+    "featured": true
+  },
+    {
+    "title": "Desktop publishing",
+    "category": "Desktop publishing",
+    "description": "equips individuals with the skills to create visually appealing and professional documents for both print and digital media using specialized software",
+    "duration": "8 weeks",
+    "rating": 4.5,
+    "image": "staticfiles/courses_img/dtp.png",
+    "featured": true
   }
+
 ];

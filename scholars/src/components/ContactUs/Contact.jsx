@@ -1,9 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { MapPin, Phone, Mail, Clock, Send, Leaf, BookOpen, ChevronDown } from 'lucide-react';
+import emailjs from '@emailjs/browser'
 
 const BASE = process.env.REACT_APP_API_BASE_URL;
+const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
 
+
+console.log(serviceId,templateId,publicKey);
 const Contact = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const [contactInfo, setContactInfo] = useState({
     location: '',
     email: '',
@@ -40,21 +48,17 @@ const Contact = () => {
       [name]: value
     }));
   };
-
   const handleSubmit = (e) => {
-    e.preventDefault();
-    // Send form data to backend via POST
-    fetch(`${BASE}/scholarsItech/ContactQueries`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData)
-    })
-      .then(response => {
-        if (!response.ok) throw new Error('Network response was not ok');
-        return response.json();
-      })
-      .then(data => {
-        // Reset form after successful submission
+  e.preventDefault();
+  setIsSubmitting(true);
+
+  emailjs
+    .send(serviceId, templateId, formData, publicKey)
+    .then(
+      (result) => {
+        alert("Message sent successfully!");
+
+        // Reset form
         setFormData({
           name: '',
           email: '',
@@ -62,13 +66,16 @@ const Contact = () => {
           subject: '',
           message: ''
         });
-        alert('Thank you for your message. We will get back to you soon!');
-      })
-      .catch(error => {
-        console.error('Error:', error);
-        alert('There was an error submitting the form. Please try again.');
-      });
-  };
+
+        setIsSubmitting(false);
+      },
+      (error) => {
+        alert("Failed to send the message. Please try again.");
+        setIsSubmitting(false);
+      }
+    );
+};
+
 
   const toggleFAQ = (index) => {
     setActiveFAQ(activeFAQ === index ? null : index);
@@ -275,14 +282,17 @@ const Contact = () => {
                     placeholder="Type your message here..."
                   ></textarea>
                 </div>
-                
                 <button
-                  type="submit"
-                  className="w-full bg-gradient-to-r from-[#1a3c2a] to-[#2d5d42] hover:from-[#2d5d42] hover:to-[#1a3c2a] text-white font-medium py-3 px-4 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center"
-                >
-                  <Send className="h-5 w-5 mr-2" />
-                  Send Message
-                </button>
+  type="submit"
+  disabled={isSubmitting}
+  className={`w-full bg-gradient-to-r from-[#1a3c2a] to-[#2d5d42] hover:from-[#2d5d42] hover:to-[#1a3c2a] text-white font-medium py-3 px-4 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center ${
+    isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
+  }`}
+>
+  <Send className="h-5 w-5 mr-2" />
+  {isSubmitting ? 'Sending...' : 'Send Message'}
+</button>
+
               </form>
             </div>
           </div>

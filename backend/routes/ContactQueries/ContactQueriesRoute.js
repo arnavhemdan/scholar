@@ -5,11 +5,8 @@ import ContactQuaries from '../../UI-Models/ContactQuaries/ContactQuaries.js';
 router.post('/ContactQueries', async (req, res) => {
   try {
     const { name, email, phone,message,subject } = req.body;
-   console.log(req.body);
-
    const phoneNumber=phone
     const description=message
-   console.log(phoneNumber);
     const newQuery = new ContactQuaries({
       name,
       email,

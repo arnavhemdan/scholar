@@ -3,9 +3,9 @@ const  router =express.Router();
 import Courses from '../../UI-Models/Courses/Courses.js';
 
 router.get('/getCourses',async (req,res)=>
-{
+{ 
    try{
-      console.log("backend");
+      console.log("backend hi my anem is arnav kese ho aap");
     const Course= await Courses.find();
     res.json(Course);
    }

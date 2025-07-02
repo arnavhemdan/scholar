@@ -24,7 +24,7 @@ const SearchBar = ({ onSearch }) => {
             placeholder="Search for courses, categories, or keywords..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full bg-white border border-gray-300 rounded-lg py-3 pl-10 pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm"
+            className="w-full bg-white border border-[#1a3c2a] rounded-lg py-3 pl-10 pr-10 focus:outline-none focus:ring-2 focus:ring-[#1a3c2a] focus:border-[#1a3c2a] shadow-sm"
           />
           {searchQuery && (
             <button
@@ -38,7 +38,7 @@ const SearchBar = ({ onSearch }) => {
         </div>
         <button
           type="submit"
-          className="absolute right-0 top-0 h-full px-4 bg-blue-600 hover:bg-blue-700 text-white rounded-r-lg transition-colors"
+          className="absolute right-0 top-0 h-full px-4 bg-[#1a3c2a] hover:bg-blue-700 text-white rounded-r-lg transition-colors"
         >
           Search
         </button>

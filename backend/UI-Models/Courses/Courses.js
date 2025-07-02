@@ -17,11 +17,6 @@ const  CourseSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  price: {
-    type: String,
-    required: true,
-    match: /^\$\d+(\.\d{2})?$/
-  },
   rating: {
     type: Number,
     required: true,

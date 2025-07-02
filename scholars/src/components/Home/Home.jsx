@@ -34,9 +34,10 @@ const [enrollmentCourse, setEnrollmentCourse] = useState(null);
 
     fetchCourses();
   }, []);
-  
-  const featuredCourses = courses.slice(0, 4);
-  
+  const featuredCourseNames = ['Complete C Bootcamp', 'Complete Typing Course', 'Complete Tally Course', 'Complete Web Development Bootcamp'];
+const featuredCourses = courses.filter(course => 
+  featuredCourseNames.includes(course.title)
+);
   useEffect(() => {
     const fetchTestimonials = async () => {
       try {
@@ -77,7 +78,7 @@ const [enrollmentCourse, setEnrollmentCourse] = useState(null);
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-sm flex flex-col items-center text-center transform transition-transform hover:scale-105">
               <GraduationCap className="text-[#1a3c2a] w-12 h-12 mb-4" />
-              <h3 className="text-4xl font-bold text-[#1a3c2a] mb-2">50+</h3>
+              <h3 className="text-4xl font-bold text-[#1a3c2a] mb-2">30+</h3>
               <p className="text-[#2d5d42]">Courses Available</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm flex flex-col items-center text-center transform transition-transform hover:scale-105">
@@ -92,8 +93,8 @@ const [enrollmentCourse, setEnrollmentCourse] = useState(null);
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm flex flex-col items-center text-center transform transition-transform hover:scale-105">
               <Clock className="text-[#1a3c2a] w-12 h-12 mb-4" />
-              <h3 className="text-4xl font-bold text-[#1a3c2a] mb-2">24/7</h3>
-              <p className="text-[#2d5d42]">Learning Support</p>
+              <h3 className="text-4xl font-bold text-[#1a3c2a] mb-2">Quick</h3>
+              <p className="text-[#2d5d42]">Learning</p>
             </div>
           </div>
         </div>
@@ -197,7 +198,7 @@ const [enrollmentCourse, setEnrollmentCourse] = useState(null);
           )}
         </div>
       </section>
-      
+
       {/* CTA Section */}
       <section className="py-16 bg-[#1a3c2a]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -205,10 +206,7 @@ const [enrollmentCourse, setEnrollmentCourse] = useState(null);
           <p className="text-[#e0d9c9] max-w-2xl mx-auto mb-8">
             Join thousands of students who have transformed their careers with our industry-recognized courses.
           </p>
-          <button className="bg-[#e0d9c9] hover:bg-[#d0c9b9] text-[#1a3c2a] font-bold py-3 px-8 rounded-md shadow-lg transition-all transform hover:scale-105">
-            Get Started Today
-          </button>
-        </div>
+       </div>
       </section>
     </div>
   );

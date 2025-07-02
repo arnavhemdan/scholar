@@ -5,7 +5,6 @@ router.get('/contactDetails', async (req, res) => {
   try {
     console.log('backend contact');
     const contact = await ContactDetails.findOne(); // use findOne() if you're expecting a single contact record
-    console.log(contact);
     res.json(contact);
   } catch (error) {
     console.error(error);
