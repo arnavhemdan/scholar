@@ -1,22 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const carouselData = [
   {
     id: 1,
-    image: '/images/carousel1.png',
+    image: '/images/carousel1.webp',
     title: 'Transform Your Future With Quality Education',
     description: 'Join thousands of students who have advanced their careers with our industry-recognized courses.'
   },
   {
     id: 2,
-    image: '/images/carousel2.png',
+    image: '/images/carousel2.webp',
     title: 'Learn From Industry Experts',
     description: 'Our courses are designed and taught by professionals with years of real-world experience.'
   },
   {
     id: 3,
-    image: '/images/carousel3.png',
+    image: '/images/carousel3.webp',
     title: 'Flexible Learning Options',
     description: 'Study online, on-campus, or in a hybrid format that fits your schedule and learning style.'
   }

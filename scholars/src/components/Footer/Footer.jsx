@@ -17,11 +17,11 @@ const BASE = process.env.REACT_APP_API_BASE_URL;
 
 const Footer = () => {
   const [contactInfo, setContactInfo] = useState({
-    location: '',
-    email: '',
-    pincode: '',
-    phoneNumber: '',
-    operationHours: ''
+    location: '1st Floor, Opposite Himalayan Drug Company, Near Raja Ram Mohan Roy School, India, Saharanpur Road, Dehradun, Uttarakhand',
+    email: 'scholarsofficial2006@gmail.com',
+    pincode: '248002',
+    phoneNumber: 'P9997232314',
+    operationHours: 'Monday - Saturday: 10AM - 8PM Sunday: Closed'
 
   });
 

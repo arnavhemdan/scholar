@@ -8,16 +8,15 @@ const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
 const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
 
 
-console.log(serviceId,templateId,publicKey);
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const [contactInfo, setContactInfo] = useState({
-    location: '',
-    email: '',
-    pincode: '',
-    phoneNumber: '',
-    operationHours: 'Monday - Friday: 9AM - 6PM\nSaturday: 10AM - 4PM',
+   location: '1st Floor, Opposite Himalayan Drug Company, Near Raja Ram Mohan Roy School, India, Saharanpur Road, Dehradun, Uttarakhand',
+    email: 'scholarsofficial2006@gmail.com',
+    pincode: '248002',
+    phoneNumber: 'P9997232314',
+    operationHours: 'Monday - Saturday: 10AM - 8PM Sunday: Closed',
     googleMapLink: ''
   });
 

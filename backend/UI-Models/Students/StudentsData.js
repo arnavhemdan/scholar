@@ -16,10 +16,10 @@ export const StudentsData = [
     message: "Learned so much from this course, highly recommend!"
   },
   {
-    name: "aastha",
+    name: "astha",
     email: "aastha@example.com",
     phoneNo: "8123456789",
-    image:"staticfiles/StudentsFeedback/aastha",
+    image:"staticfiles/StudentsFeedback/astha.jpg",
     course: "Digital Marketing",
     message: "Great content and well explained."
   }

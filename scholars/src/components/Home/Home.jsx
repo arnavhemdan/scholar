@@ -34,6 +34,7 @@ const [enrollmentCourse, setEnrollmentCourse] = useState(null);
 
     fetchCourses();
   }, []);
+  
   const featuredCourseNames = ['Complete C Bootcamp', 'Complete Typing Course', 'Complete Tally Course', 'Complete Web Development Bootcamp'];
 const featuredCourses = courses.filter(course => 
   featuredCourseNames.includes(course.title)

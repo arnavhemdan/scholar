@@ -1,13 +1,15 @@
 import mongoose from 'mongoose';
 
-const  CourseSchema = new mongoose.Schema({
-    title: {
+const CourseSchema = new mongoose.Schema({
+  title: {
     type: String,
-    required: true
+    required: true,
+    index: true         // text or simple index
   },
   category: {
     type: String,
-    required: true
+    required: true,
+    index: true         // indexing for filtering by category
   },
   description: {
     type: String,
@@ -21,7 +23,8 @@ const  CourseSchema = new mongoose.Schema({
     type: Number,
     required: true,
     min: 0,
-    max: 5
+    max: 5,
+    index: true         // index if you filter/sort by rating
   },
   image: {
     type: String,
@@ -29,10 +32,12 @@ const  CourseSchema = new mongoose.Schema({
   },
   featured: {
     type: Boolean,
-    default: false
+    default: false,
+    index: true         // for featured course filters
   }
-  
 });
 
+// Optional: text index for search
+CourseSchema.index({ title: 'text', description: 'text' });
 
 export default mongoose.model('Courses', CourseSchema);

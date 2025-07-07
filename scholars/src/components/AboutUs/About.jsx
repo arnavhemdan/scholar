@@ -1,5 +1,6 @@
 import React from 'react';
 import { BookOpen, Users, Award, MessageSquare, Code, Leaf, ChevronRight, HeartHandshake, UserRound, Star, GraduationCap, Trophy } from 'lucide-react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import { useNavigate } from 'react-router-dom';
 const About = () => {
@@ -59,11 +60,11 @@ const About = () => {
                 </div>
               </div>
             </div>
-            
+          
             <div className="relative order-1 lg:order-2">
               <div className="aspect-video rounded-2xl overflow-hidden shadow-xl border-4 border-[#e0d9c9]">
-                <img 
-                  src="/images/aboutus1.png" 
+                <LazyLoadImage 
+                  src="/images/aboutus1.webp" 
                   alt="Scholars Itech Team" 
                   className="w-full h-full object-cover"
                 />
@@ -83,8 +84,8 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <div className="aspect-video rounded-2xl overflow-hidden shadow-xl border-4 border-[#e0d9c9]">
-                <img 
-                  src="/images/aboutus2.png" 
+                <LazyLoadImage 
+                  src="/images/aboutus2.webp" 
                   alt="Women Empowerment" 
                   className="w-full h-full object-cover"
                 />
@@ -211,8 +212,8 @@ const About = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-[#e0d9c9] hover:shadow-xl transition-all duration-300">
-              <img 
-                src="/images/nishat.png" 
+              <LazyLoadImage 
+                src="/images/nishat.webp" 
                 alt="Ms. Nishat " 
                 className="w-full h-64 object-cover object-center"
               />
@@ -234,8 +235,8 @@ const About = () => {
             </div>
             
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-[#e0d9c9] hover:shadow-xl transition-all duration-300">
-              <img 
-                src="/images/nigar.png" 
+              <LazyLoadImage 
+                src="/images/nigar.webp" 
                 alt="Ms. Nigar" 
                 className="w-full h-64 object-cover object-center"
               />
@@ -276,8 +277,8 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Developer 1 */}
             <div className="bg-white rounded-2xl shadow-lg border border-[#e0d9c9] p-8 flex flex-col md:flex-row items-center hover:shadow-xl transition-all duration-300">
-              <img
-                src="/images/arnav.jpg"
+              <LazyLoadImage
+                src="/images/arnav.webp"
                 alt="Arnav Hemdan"
                 className="rounded-xl w-24 h-24 mr-6 object-cover"
               />
@@ -300,8 +301,8 @@ const About = () => {
 
             {/* Developer 2 */}
             <div className="bg-white rounded-2xl shadow-lg border border-[#e0d9c9] p-8 flex flex-col md:flex-row items-center hover:shadow-xl transition-all duration-300">
-              <img
-                src="/images/ayush.jpg"
+              <LazyLoadImage
+                src="/images/ayush.webp"
                 alt="Ayush Balodhi"
                 className="rounded-xl w-24 h-24 mr-6 object-cover"
               />
