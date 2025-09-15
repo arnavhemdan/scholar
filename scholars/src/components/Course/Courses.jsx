@@ -68,7 +68,7 @@ const Courses = () => {
   };
 
   const handleEnrollmentSubmit = (enrollmentData) => {
-    console.log('Enrollment submitted:', enrollmentData);
+
     fetch(`${BASE}/scholarsItech/enrollments`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

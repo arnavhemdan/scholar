@@ -31,13 +31,12 @@ const FeaturedCourses = () => {
   }, []);
    
   const featuredCourseNames = ['Complete C Bootcamp', 'Complete Typing Course', 'Complete Tally Course', 'Complete Web Development Bootcamp'];
-  console.log(courses);
   const featuredCourses = courses.filter(course => 
     featuredCourseNames.includes(course.title)
   );
 
   const handleEnrollmentSubmit = (enrollmentData) => {
-    console.log('Enrollment submitted:', enrollmentData);
+  
     fetch(`${BASE}/scholarsItech/enrollments`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

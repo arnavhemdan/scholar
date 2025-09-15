@@ -32,8 +32,8 @@ const handleSubmit = async (e) => {
 
   if (isSubmitted) {
     return (
-      <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-        <div className="bg-white rounded-lg shadow-xl max-w-md w-full">
+      <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-2">
+<div className="bg-white rounded-lg shadow-xl w-full max-w-md sm:max-w-lg md:max-w-xl max-h-[90vh] overflow-y-auto mx-2">
           <div className="flex justify-between items-center border-b p-4">
             <h2 className="text-xl font-bold text-[#1a3c2a]">Enrollment Submitted</h2>
             <button 
