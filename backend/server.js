@@ -21,7 +21,7 @@ console.log("-------------------------------------------------------------------
 
 // Enable CORS
 app.use(cors({
-     origin: ['https://www.scholarsitech.com/'], // Uncomment if needed
+   origin: ['https://www.scholarsitech.com', 'https://scholarsitech.com'],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
     credentials: true,
 }));
