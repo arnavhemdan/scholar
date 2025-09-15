@@ -3,7 +3,7 @@ const router =express.Router();
 import ContactDetails from "../../UI-Models/ContactDetails/ContactDetails.js";
 router.get('/contactDetails', async (req, res) => {
   try {
-    console.log('backend contact');
+   
     const contact = await ContactDetails.findOne(); // use findOne() if you're expecting a single contact record
     res.json(contact);
   } catch (error) {

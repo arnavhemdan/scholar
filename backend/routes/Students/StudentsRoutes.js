@@ -45,7 +45,7 @@ router.post('/scholarsItechfeedback', upload.single('image'), async (req, res) =
 
 router.get('/getscholarsItechStudents',async(req,res)=>{
  try {
-    const student = await students.find() ;
+    const student = await students.find().lean(); 
     
     res.json(student);
   } catch (err) {
